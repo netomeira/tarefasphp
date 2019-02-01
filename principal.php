@@ -1,22 +1,10 @@
-
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Microblogging Site</title>
-</head>
-<body>
-    
 <?php 
-    $idade = $_GET['idade'];
-    $sexo = $_GET['sexo'];
+    require_once 'classes/Produto.php';
+    
+    $martelo = new Produto;
 
-    if ($idade < 18) {
-        echo "<b>menor de idade e ${sexo}</b>";
-    } else {
-        echo "<b>maior de idade e ${sexo}</b>";
-    }
+    $martelo->nome = "Martelo Phillips";
+    $martelo->quantEstoque = 50;
+
+    $martelo->imprimeDados();
 ?>
-
-</body>
-</html>
